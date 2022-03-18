@@ -17,5 +17,11 @@ var helloTwo = readlineSync.question(' +, -, * or / ');
 
 var userChoice = readlineSync.prompt();//check the prompt in a for loop
 
+if ( userChoice == maths) {
+ console.log('please choice something else');
+} else {
+    
+}
+
 
 console.log( maths);
