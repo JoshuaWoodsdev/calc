@@ -1,9 +1,6 @@
-//prompt the user and save into a math 
-//add the prompt-sync to project
-
 var readlineSync = require('readline-sync');
+//Say hello to the user
 
-//setup the array
 var maths = [
     '+',
      '-',
@@ -12,10 +9,7 @@ var maths = [
     ];
 
 //setup two calls
-var hello = readlineSync.question('What function do you want to do? ');
-var helloTwo = readlineSync.question(' +, -, * or / ');
-
-var userChoice = readlineSync.prompt();//check the prompt in a for loop
+var userChoice = readlineSync.question('What math operation would you like to perform? ');
 
 if ( userChoice == maths) {
  console.log('please choice something else');
