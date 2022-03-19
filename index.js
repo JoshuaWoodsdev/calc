@@ -1,5 +1,4 @@
 var readlineSync = require('readline-sync');
-//Say hello to the user
 
 var maths = [
     '+',
@@ -8,14 +7,18 @@ var maths = [
      '/'
     ];
 
-//setup two calls
+var problem = [ ];   
+
 var userChoice = readlineSync.question('What math operation would you like to perform? ');
 
 if ( userChoice == maths) {
- console.log('please choice something else');
+ //if it checks out then it is pushed into the problem array
 } else {
-    
+    //do a repeat of userChoice
 }
 
+//readline prompt
+var firstNumber = readlineSync.questionInt();//collect the first number and push into the problem array
+ push
 
-console.log( maths);
+console.log();
