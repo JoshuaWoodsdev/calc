@@ -6,12 +6,16 @@
 //Logic: Conduct a check on each input
 
 var readlineSync = require('readline-sync');
-var maths = [
-              *,
-              +,
-              -,
-              /
-];
+var maths = ['+', '*', '/', '-'];
 //Start
-var userMath = readlineSync.promt('What maths would you like to perform? ');
-console.log(' hi you choose' + userMath + '!');
+var userMath = readlineSync.question('What maths would you like to perform? ');
+
+var userMath2 = readlineSync.questionInt('What is the first number?');
+
+var userMath3 = readlineSync.questionInt('What is the second numbers? ');
+
+function math() {
+
+}
+
+console.log('call function should go here');
