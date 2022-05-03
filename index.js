@@ -9,7 +9,7 @@ var userMath = readlineSync.question(' What maths would you like to perform? ');
    if true{
      console.log(yesss);
   } else {
-     console.log(nooooo);
+     console.log();
    }
    console.log(maths.includes(userMath));
 
