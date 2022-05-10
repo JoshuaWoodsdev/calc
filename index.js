@@ -1,19 +1,32 @@
+//setup of program calling the packet
+var readlineSync = require('readline-sync'),
+ math = ['+', '*', '/', '-'],//this does not change const, this is the array has index
+ index = readlineSync.keyInSelect(math, 'What operation would you like to perform ? ' );
+//above setup the choice next check if its in the array and then if statment
+//the IF check
+if(math.includes(index)) {
+    console.log('ok it is in this and working ');
+} else {
+    console.log('you have to start over ');
+}
+//check is returning a negtive maybe i have gammmer problem?
+var firstNumber = readlineSync.questionInt(' Please enter the first number ' );
+var secondNumber = readlineSync.questionInt(' Please enter the second number ');
 
-//- how will you decide if the users input is a valid operation? What should the users input be checked against?
-//- at this point you have the operation and both numbers. Now you can implement the math calculation on the numbers based on the input
-var readlineSync = require('readline-sync');
-var maths = ['+', '*', '/', '-'];
+//math is here checks the index itself to the inputs
+function programMath() {
+  if (index === '+') {
+    console.log( firstNumber + secondNumber );
+  }
+   else if (index === '-') {
+     console.log( firstNumber - secondNumber);
+  }
+  else if (index === '*') {
+    console.log( firstNumber * secondNumber);
+  }
+  else if (index === '/') {
+    console.log( firstNumber / secondNumber);
+  }
+};
 
-var userMath = readlineSync.question(' What maths would you like to perform? ');
-   //setup up the array check
-   if true{
-     console.log(yesss);
-  } else {
-     console.log();
-   }
-   console.log(maths.includes(userMath));
-
-var userMath2 = readlineSync.questionInt('What is the first number?');
-var userMath3 = readlineSync.questionInt('What is the second numbers? ');
-
-//don the math...
+programMath();
