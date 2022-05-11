@@ -1,32 +1,37 @@
 //setup of program calling the packet
 var readlineSync = require('readline-sync'),
- math = ['+', '*', '/', '-'],//this does not change const, this is the array has index
- index = readlineSync.keyInSelect(math, 'What operation would you like to perform ? ' );
-//above setup the choice next check if its in the array and then if statment
+math = ['+', '-', '/', '*'],
+index = readlineSync.keyInSelect(math, 'What math do you want to perform?');
+console.log('You choose ' + math[index]);
 //the IF check
-if(math.includes(index)) {
-    console.log('ok it is in this and working ');
-} else {
-    console.log('you have to start over ');
+//solved the error I was having here by asking IF is was wrong instead of right
+if(!math.includes(index)) {
+  console.log('ok it is in this and working ');
+  } else {
+  console.log('The (math.includes(index)) is returning false? No matter how I set it up? Grammer error?  ');
 }
 //check is returning a negtive maybe i have gammmer problem?
 var firstNumber = readlineSync.questionInt(' Please enter the first number ' );
 var secondNumber = readlineSync.questionInt(' Please enter the second number ');
 
-//math is here checks the index itself to the inputs
-function programMath() {
-  if (index === '+') {
+//returning the function logic() nothing else
+function logic() {
+  if (index == '+') {
     console.log( firstNumber + secondNumber );
   }
-   else if (index === '-') {
+   else if (index == '-') {
      console.log( firstNumber - secondNumber);
   }
-  else if (index === '*') {
+  else if (index == '*') {
     console.log( firstNumber * secondNumber);
   }
-  else if (index === '/') {
+  else if (index == '/') {
     console.log( firstNumber / secondNumber);
   }
-};
+}
+//seems like I have a error in my function
+function myFunction() {
+  console.log("Hello World!");
+}
 
-programMath();
+myFunction();
