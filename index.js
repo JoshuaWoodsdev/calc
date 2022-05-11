@@ -8,30 +8,31 @@ console.log('You choose ' + math[index]);
 if(!math.includes(index)) {
   console.log('ok it is in this and working ');
   } else {
-  console.log('The (math.includes(index)) is returning false? No matter how I set it up? Grammer error?  ');
+  console.log('The (math.includes(index) is returning false? No matter how I set it up? Grammer error?  ');
 }
-//check is returning a negtive maybe i have gammmer problem?
+//how do i force them to restart?
+
+
 var firstNumber = readlineSync.questionInt(' Please enter the first number ' );
 var secondNumber = readlineSync.questionInt(' Please enter the second number ');
 
-//returning the function logic() nothing else
-function logic() {
-  if (index == '+') {
+function myFunction() {
+  if (math[index] == '+') {
     console.log( firstNumber + secondNumber );
   }
-   else if (index == '-') {
-     console.log( firstNumber - secondNumber);
+   else if (math[index] == '-') {
+     console.log( firstNumber - secondNumber );
   }
-  else if (index == '*') {
-    console.log( firstNumber * secondNumber);
+  else if (math[index] == '*') {
+    console.log( firstNumber * secondNumber );
   }
-  else if (index == '/') {
-    console.log( firstNumber / secondNumber);
+  else if (math[index] == '/') {
+    console.log( firstNumber / secondNumber );
   }
 }
 //seems like I have a error in my function
-function myFunction() {
-  console.log("Hello World!");
-}
+//function myFunction() {
+  //console.log("Hello World!");
+//}
 
 myFunction();
