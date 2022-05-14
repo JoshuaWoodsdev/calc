@@ -1,31 +1,42 @@
-var readlineSync = require('readline-sync'),
-math = ['+', '-', '/', '*'],
-index = readlineSync.keyInSelect(math, 'What math do you want to perform?');
 
-//the IF check
-//solved the error
-if(!math.includes(index)) {
-  console.log('You choose ' + math[index] + ' as your operator ');
+const promt = require('prompt');
+
+const readlineSync = require('readline-sync');
+math = ['+', '-', '/', '*']
+
+console.log('What math do you want to perform? ' + math );
+userAnswer = readlineSync.prompt();
+
+//this goes into a while loop
+
+if (userAnswer === '+' || '-' || '/' || '*') {
+    console.log( 'we got this' );
   } else {
-  console.log('That is not a valid operation');
-}
-//how do I force them to restart?
+    console.log('try again');
+  }
+
+
+
+
+//update to add the error handling
+//turn it into a function? and use error handling
+
 var firstNumber = readlineSync.questionInt(' Please enter the first number ' );
 var secondNumber = readlineSync.questionInt(' Please enter the second number ');
 
 function myFunction() {
-  if (math[index] == '+') {
+  if (userAnswer == '+' ) {
     console.log( firstNumber + secondNumber );
   }
-   else if (math[index] == '-') {
+   else if (userAnswer == '-' ) {
      console.log( firstNumber - secondNumber );
   }
-  else if (math[index] == '*') {
+  else if (userAnswer == '*') {
     console.log( firstNumber * secondNumber );
   }
-  else if (math[index] == '/') {
+  else if (userAnswer == '/') {
     console.log( firstNumber / secondNumber );
   }
 }
-//I don't know why I needed the [] around index?
+
 myFunction();
